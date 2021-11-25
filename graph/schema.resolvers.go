@@ -17,6 +17,10 @@ func (r *queryResolver) Bye(ctx context.Context) (string, error) {
 	return "goodbye dear friend", nil
 }
 
+func (r *queryResolver) Echo(ctx context.Context, input string) (string, error) {
+	return "you said: " + input, nil
+}
+
 // Query returns generated.QueryResolver implementation.
 func (r *Resolver) Query() generated.QueryResolver { return &queryResolver{r} }
 

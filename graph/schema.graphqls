@@ -5,4 +5,5 @@
 type Query {
   hello: String!
   bye: String!
+  echo(input: String!): String!
 }
