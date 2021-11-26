@@ -10,6 +10,7 @@ import (
 )
 
 func (r *queryResolver) Hello(ctx context.Context) (string, error) {
+	defer ctx.Done()
 	return "World", nil
 }
 
